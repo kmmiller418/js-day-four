@@ -9,3 +9,21 @@ const users = [
     {id: 3879, firstName: 'Ira', lastName: 'Bolislovitz', logins: 9, isPremiumMember: false}
 ];
 
+// Find a user named 'Jose'
+console.log(users.find((user) => user.firstName == 'Jose'));
+
+// Get an array of all the premium members
+console.log(users.filter((user) => user.isPremiumMember));
+
+// Get an array of all the user last names
+console.log(users.map((user) => user.lastName));
+
+// Get an array of the full names who have logged in more than 10 times
+const filteredLogins = users.filter((user) => user.logins > 10);
+console.log(filteredLogins.map((user) => user.firstName + ' ' + user.lastName));
+
+// Get the total number of logins for the list of users
+const numLogins = users.map((user)=> user.logins);
+console.log(logins.reduce(function(login, total){
+    return login + total;
+}, 0));
