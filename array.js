@@ -24,6 +24,6 @@ console.log(filteredLogins.map((user) => user.firstName + ' ' + user.lastName));
 
 // Get the total number of logins for the list of users
 const numLogins = users.map((user)=> user.logins);
-console.log(logins.reduce(function(login, total){
+console.log(numLogins.reduce(function(login, total){
     return login + total;
 }, 0));
